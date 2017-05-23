@@ -53,10 +53,12 @@ public class UserAuthentication implements Filter{
 		
 		if(!token.equals("")){
 			////用此token到认证中心认证，返回successful=true，则提供服务，否则拒绝服务
+			//HttpClient url
+			
 			
 			JSONArray jsonR = JSONArray.fromObject("{'successful':true,'message':'ok'}");
 			
-			if(token.equals("asdfa")){
+			if(jsonR!=null){
 				HeaderMapRequestWrapper requestWrapper = new HeaderMapRequestWrapper(req);
 		        requestWrapper.addHeader("systemId", systemId);
 		        chain.doFilter(requestWrapper, response);
