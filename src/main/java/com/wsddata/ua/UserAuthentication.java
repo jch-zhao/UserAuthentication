@@ -48,7 +48,7 @@ public class UserAuthentication implements Filter{
 		
 		System.out.println(req.getPathInfo());
 		
-		URL url=new URL("http://"+wac_address+"/"+version+"/checkToken");
+		URL url=new URL("http://"+wac_address+"/"+version+"/checkToken?token="+token);
 		System.out.println(systemId);
 		
 		if(!token.equals("")){
