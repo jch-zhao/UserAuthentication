@@ -52,7 +52,7 @@ public class UserAuthentication implements Filter{
 			//HeaderMapRequestWrapper requestWrapper = new HeaderMapRequestWrapper(req);
 	        //requestWrapper.addHeader("systemId", systemId);
 			
-			////用此token到认证中心认证，返回successful=true，则提供服务，否则拒绝服务
+			////用此token到认证中心认证，返回successful=true，且角色符合，则提供服务，否则拒绝服务
 			//HttpClient url
 			String strResult=null;
 			
